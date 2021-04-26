@@ -4,6 +4,8 @@ Work in progress
 
 Installation in env file:
 
+Quick install notes comming soon.
+
 ```
 USE_NGROK_REPLACE=true
 ```
