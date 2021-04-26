@@ -2,7 +2,7 @@
 
 Work in progress
 
-Installation:
+Installation in env file:
 
 ```
 USE_NGROK_REPLACE=true
