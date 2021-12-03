@@ -21,19 +21,18 @@ if (!function_exists('ngrok_replace')) {
             abort(403, 'Looks like you are not the -host parameter or ngrok env url.');
         }
 
-
         //
         if (isset($_SERVER['HTTP_X_ORIGINAL_HOST'])) {
             $url = str_replace($_SERVER['HTTP_HOST'], $_SERVER['HTTP_X_ORIGINAL_HOST'], $url);
         } else {
             $url = str_replace($_SERVER['HTTP_HOST'], $ngrok_url, $url);
         }
-        
+
         // replace https
         if (env('NGROK_FORCE_SSL', true) === true) {
             $url = str_replace('http://', 'https://', $url);
         }
-        
+
         return $url;
     }
 }
